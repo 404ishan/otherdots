@@ -16,3 +16,7 @@ post_hook = 'pywalfox update'
 [templates.ghostty]
 input_path = './templates/config'
 output_path = '~/.config/ghostty/colors/config'
+
+[templates.fuzzel]
+input_path = './templates/fuzzel.ini'
+output_path = '~/.config/fuzzel/colors.ini'
