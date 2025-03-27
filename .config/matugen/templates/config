@@ -1,4 +1,4 @@
-palette = 0={{ colors.background.default.hex_stripped }}
+palette = 0={{ colors.surface_container_lowest.default.hex_stripped }}
 palette = 1={{ colors.error.default.hex_stripped }}
 palette = 2={{ colors.primary.default.hex_stripped }}
 palette = 3={{ colors.secondary.default.hex_stripped }}

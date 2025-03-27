@@ -1,7 +1,7 @@
 font-family=LilexNerdFont
 font-size=15
 cursor-style=bar
-window-padding-x=28
+window-padding-x=25
 window-padding-y=10
 adjust-cell-height=4
 window-padding-balance=true
