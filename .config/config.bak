@@ -1,0 +1,125 @@
+input {
+    keyboard {
+        xkb {
+            layout ""
+            model ""
+            rules ""
+            variant ""
+        }
+        repeat-delay 600
+        repeat-rate 25
+        track-layout "global"
+    }
+    touchpad {
+        tap
+        natural-scroll
+        accel-speed 0.000000
+    }
+    mouse { accel-speed 0.000000; }
+    trackpoint { accel-speed 0.000000; }
+    trackball { accel-speed 0.000000; }
+    tablet
+    touch
+    focus-follows-mouse
+}
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+prefer-no-csd
+layout {
+    gaps 16
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
+    }
+    focus-ring { off; }
+    border { off; }
+    insert-hint { color "rgb(127 200 255 / 50%)"; }
+    default-column-width
+    center-focused-column "never"
+}
+cursor {
+    xcursor-theme "macOS"
+    xcursor-size 24
+}
+hotkey-overlay
+environment
+binds {
+    Print { spawn "sh" "-c" "grim -g \"$(slurp)\" - | wl-copy"; }
+    Super+0 { focus-workspace 10; }
+    Super+1 { focus-workspace 1; }
+    Super+2 { focus-workspace 2; }
+    Super+3 { focus-workspace 3; }
+    Super+4 { focus-workspace 4; }
+    Super+5 { focus-workspace 5; }
+    Super+6 { focus-workspace 6; }
+    Super+7 { focus-workspace 7; }
+    Super+8 { focus-workspace 8; }
+    Super+9 { focus-workspace 9; }
+    Super+Equal { set-column-width "+5%"; }
+    Super+F { maximize-column; }
+    Super+H { focus-column-left; }
+    Super+J { focus-window-down-or-column-left; }
+    Super+K { focus-window-up-or-column-right; }
+    Super+L { focus-column-right; }
+    Super+Minus { set-column-width "-5%"; }
+    Super+Q { close-window; }
+    Super+R { spawn "sh" "-c" "rofi -show drun"; }
+    Super+Shift+H { move-column-left; }
+    Super+Shift+L { move-column-right; }
+    Super+T { spawn "ghostty"; }
+    Super+V { toggle-window-floating; }
+    XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioMute { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "+5%"; }
+}
+spawn-at-startup "sh" "-c" "waybar"
+spawn-at-startup "sh" "-c" "swww-daemon"
+window-rule {
+    match app-id="^.*$"
+    open-maximized true
+    draw-border-with-background false
+    geometry-corner-radius 5.000000 5.000000 5.000000 5.000000
+    clip-to-geometry true
+    shadow {
+        on
+        offset x=8 y=8
+        softness 50
+        spread 8
+        draw-behind-window true
+        color "#00000065"
+    }
+}
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+    default-column-width { fixed 800; }
+    default-window-height { fixed 540; }
+    open-floating true
+}
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    default-column-width { fixed 800; }
+    default-window-height { fixed 540; }
+    open-floating true
+}
+layer-rule {
+    match namespace="waybar"
+    shadow {
+        off
+        offset x=1 y=1
+        softness 40
+        spread 10
+        draw-behind-window true
+        color "#00000002"
+    }
+    geometry-corner-radius 12.000000 12.000000 12.000000 12.000000
+}
+animations {
+    slowdown 0.800000
+    window-open {
+        duration-ms 160
+        curve "ease-out-expo"
+    }
+}
