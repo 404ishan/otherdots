@@ -14,6 +14,6 @@ palette = 12={{ colors.secondary_container.default.hex }}
 palette = 13={{ colors.surface_bright.default.hex }}
 palette = 14={{ colors.tertiary.default.hex }}
 palette = 15={{ colors.tertiary.default.hex }}
-background = {{ colors.surface_container_lowest.default.hex }}
+background = #0c0b10
 foreground = {{ colors.on_surface.default.hex }}
 
