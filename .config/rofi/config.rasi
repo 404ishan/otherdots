@@ -10,7 +10,7 @@ configuration {
 @theme "./colors.rasi"
 
 * {
-    font:                        "Iosevka Nerd Font 12";
+    font:                        "MartianMono Nerd Font 11";
 }
 
 window {
@@ -23,8 +23,9 @@ window {
     y-offset:                    0px;
 
     enabled:                     true;
-    border: none;
-    border-radius:               8px;
+    border: 2px;
+    border-color: @selected;
+    border-radius:               0px;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -39,8 +40,8 @@ mainbox {
 }
 
 listbox {
-    spacing:                     20px;
-    padding:                     5px 20px 20px 20px;
+    spacing:                     8px;
+    padding:                     0px 20px 20px 20px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview", "mode-switcher" ];
@@ -50,7 +51,7 @@ listbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     18px 18px;
+    padding:                     18px 18px 8px 18px;
     background-color:            transparent;
     text-color:                  @foreground;
     orientation:                 horizontal;
@@ -72,11 +73,11 @@ entry {
     enabled:                     true;
     expand:                      true;
     padding:                     12px 16px;
-    border-radius:               12px;
+    border-radius:               5px;
     background-color:            @background-alt;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Search";
+    placeholder:                 "search";
     placeholder-color:           inherit;
 }
 
@@ -89,7 +90,7 @@ mode-switcher{
 
 button {
     padding:                     12px;
-    border-radius:               100%;
+    border-radius:               5px;
     background-color:            @background-alt;
     text-color:                  inherit;
     cursor:                      pointer;
@@ -103,7 +104,7 @@ button selected {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       5;
+    lines:                       6;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -112,7 +113,7 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     5px;
+    spacing:                     0px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      "default";
@@ -123,7 +124,7 @@ element {
     enabled:                     true;
     spacing:                     10px;
     padding:                     12px;
-    border-radius:               15px;
+    border-radius:               3px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
@@ -149,8 +150,8 @@ element normal.active {
 }
 
 element selected.normal {
-    background-color:            @selected;
-    text-color:                  @foreground;
+    background-color:            none;
+    text-color:                  @element-selected;
     alternate: false;
 }
 
