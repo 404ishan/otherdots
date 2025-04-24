@@ -44,7 +44,7 @@ listbox {
     padding:                     0px 20px 20px 20px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [ "message", "listview", "mode-switcher" ];
+    children:                    [ "message", "listview" ];
     border: none;
 }
 
@@ -104,7 +104,7 @@ button selected {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       6;
+    lines:                       7;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
