@@ -1,4 +1,5 @@
 configuration {
+  display-underline: false;
 	modi:                       "drun,window";
     show-icons:                 false;
     display-drun:               "apps";
@@ -129,6 +130,7 @@ element {
     text-color:                  @foreground;
     cursor:                      pointer;
     alternate: false;
+    highlight: none;
 }
 
 element normal.normal {
