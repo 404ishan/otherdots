@@ -44,14 +44,14 @@ listbox {
     padding:                     8px 20px 20px 20px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [ "message", "listview" ];
+    children:                    [ "message", "listview", "mode-switcher" ];
     border: none;
 }
 
 inputbar {
     enabled:                     true;
     spacing:                     6px;
-    padding:                     18px 18px 8px 18px;
+    padding:                     18px 20px 8px 20px;
     background-color:            transparent;
     text-color:                  @foreground;
     orientation:                 horizontal;
@@ -73,7 +73,7 @@ entry {
     enabled:                     true;
     expand:                      true;
     padding:                     12px 0px 12px 20px;
-    border-radius:               6px;
+    border-radius:               12px;
     background-color:            #f0f0f010;
     text-color:                  inherit;
     placeholder:                 "Search";
@@ -82,20 +82,20 @@ entry {
 
 mode-switcher{
     enabled:                     true;
-    spacing:                     5px;
+    spacing:                     8px;
     background-color:            transparent;
     text-color:                  @foreground;
 }
 
 button {
     padding:                     10px 12px;
-    border-radius:               5px;
-    background-color:            @background-alt;
+    border-radius:               10px;
+    background-color:            #f0f0f010;
     text-color:                  inherit;
 }
 
 button selected {
-    background-color:            @selected;
+    background-color:            #f0f0f018;
     text-color:                  @foreground;
 }
 
@@ -122,7 +122,7 @@ element {
     enabled:                     true;
     spacing:                     10px;
     padding:                     12px 0px 12px 20px;
-    border-radius:               6px;
+    border-radius:               8px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
