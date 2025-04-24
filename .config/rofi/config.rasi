@@ -27,7 +27,7 @@ window {
     border-color: @selected;
     border-radius:               4px;
     cursor:                      "default";
-    background-color:            @background;
+    background-color:            #0c0b10;
 }
 
 mainbox {
@@ -73,10 +73,9 @@ entry {
     enabled:                     true;
     expand:                      true;
     padding:                     12px 0px 12px 20px;
-    border-radius:               5px;
-    background-color:            @background-alt;
+    border-radius:               6px;
+    background-color:            #f0f0f010;
     text-color:                  inherit;
-    cursor:                      text;
     placeholder:                 "Search";
     placeholder-color:           inherit;
 }
@@ -93,7 +92,6 @@ button {
     border-radius:               5px;
     background-color:            @background-alt;
     text-color:                  inherit;
-    cursor:                      pointer;
 }
 
 button selected {
@@ -154,7 +152,7 @@ element normal.active {
 }
 
 element selected.normal {
-    background-color:            @background-alt;
+    background-color:            #f0f0f010;
     text-color:                  inherit;
     alternate: false;
     highlight: none;
