@@ -41,7 +41,7 @@ mainbox {
 
 listbox {
     spacing:                     8px;
-    padding:                     8px 20px 12px 20px;
+    padding:                     8px 20px 20px 20px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview" ];
@@ -154,7 +154,7 @@ element normal.active {
 }
 
 element selected.normal {
-    background-color:            @selected;
+    background-color:            @background-alt;
     text-color:                  inherit;
     alternate: false;
     highlight: none;
