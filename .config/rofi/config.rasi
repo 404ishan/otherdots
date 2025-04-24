@@ -137,36 +137,42 @@ element normal.normal {
     background-color:            inherit;
     text-color:                  inherit;
     alternate: false;
+    highlight: none;
 }
 
 element normal.urgent {
     background-color:            @urgent;
     text-color:                  @foreground;
     alternate: false;
+    highlight: none;
 }
 
 element normal.active {
     background-color:            @active;
     text-color:                  @foreground;
     alternate: false;
+    highlight: none;
 }
 
 element selected.normal {
     background-color:            none;
     text-color:                  @element-selected;
     alternate: false;
+    highlight: none;
 }
 
 element selected.urgent {
     background-color:            @urgent;
     text-color:                  @foreground;
     alternate: false;
+    highlight: none;
 }
 
 element selected.active {
     background-color:            @urgent;
     text-color:                  @foreground;
     alternate: false;
+    highlight: none;
 }
 
 element-text {
@@ -175,6 +181,7 @@ element-text {
     cursor:                      inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;
+    highlight: none;
 }
 
 message {
