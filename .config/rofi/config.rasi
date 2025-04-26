@@ -11,7 +11,7 @@ configuration {
 @theme "./colors.rasi"
 
 * {
-    font:                        "Rubik 12";
+    font:                        "SF Pro Display 12";
 }
 
 window {
@@ -45,7 +45,7 @@ listbox {
     padding:                     8px 20px 20px 20px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [ "message", "listview", "mode-switcher" ];
+    children:                    [ "message", "listview" ];
     border: none;
 }
 
@@ -73,10 +73,10 @@ textbox-prompt-colon {
 entry {
     enabled:                     true;
     expand:                      true;
-    padding:                     12px 0px 12px 20px;
+    padding:                     8px 0px 8px 20px;
     border-radius:               0px;
     background-color:            inherit;
-    text-color:                  inherit;
+    text-color:                  @foreground;
     placeholder:                 "";
     placeholder-color:           inherit;
 }
@@ -103,7 +103,7 @@ button selected {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       6;
+    lines:                       1;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -123,7 +123,7 @@ element {
     enabled:                     true;
     spacing:                     10px;
     padding:                     12px 0px 12px 20px;
-    border-radius:               8px;
+    border-radius:               0px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
