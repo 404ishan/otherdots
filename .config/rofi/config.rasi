@@ -24,8 +24,9 @@ window {
     y-offset:                    0px;
 
     enabled:                     true;
+    border: 2px;
     border-color: @selected;
-    border-radius:               4px;
+    border-radius:               0px;
     cursor:                      "default";
     background-color:            #0c0b10;
 }
@@ -35,7 +36,7 @@ mainbox {
     spacing:                     0px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [ "inputbar", "listbox" ];
+    children:                    [ "inputbar" ];
     border: none;
 }
 
@@ -51,7 +52,7 @@ listbox {
 inputbar {
     enabled:                     true;
     spacing:                     6px;
-    padding:                     18px 20px 8px 20px;
+    padding:                     18px 20px 18px 20px;
     background-color:            transparent;
     text-color:                  @foreground;
     orientation:                 horizontal;
@@ -73,10 +74,10 @@ entry {
     enabled:                     true;
     expand:                      true;
     padding:                     12px 0px 12px 20px;
-    border-radius:               12px;
-    background-color:            #f0f0f010;
+    border-radius:               0px;
+    background-color:            inherit;
     text-color:                  inherit;
-    placeholder:                 "Search";
+    placeholder:                 "";
     placeholder-color:           inherit;
 }
 
