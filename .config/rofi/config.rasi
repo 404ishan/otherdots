@@ -11,7 +11,7 @@ configuration {
 @theme "./colors.rasi"
 
 * {
-    font:                        "Departure Mono 11";
+    font:                        "Departure Mono 12";
 }
 
 window {
